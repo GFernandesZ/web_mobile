@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="stylesheet" type=" text/css"
+    href="css/styles.css">
+    <script type=" text/javascript">
+        function soma(p1,p2){
+            alert(p1+p2);
+        }
+    </script>
+
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -61,11 +69,67 @@
                     </tr>
                     <tr>
                         <td>Linha 1 - Coluna 1</td>
-                        <td>Linha 2 - Coluna 2 - Teste</td>
+                        <td>Linha 2 - Coluna 2</td>
                     </tr>
                 </tbody>
 
             </table>
+
+            <form action="/cadastro/" method="post">
+
+                <label for="login"> Login </label>
+                <input type="text" name="Login" id="Login">
+
+                <label for="senha"> Senha</label>
+                <input type="password" name="senha" id="senha">
+
+                <label for="idade">Idade</label>
+                <input type="number" min="0" max="100" step="1" name="idade" id="idade">
+
+                <label for="sexo">Sexo</label>
+                <input type="radio" name="sexo" value="1" id="Masculino"> <label for="Masculino">Masculino</label>
+                <input type="radio" name="sexo" value="1" id="Ferminino"> <label for="Ferminino">Ferminino</label>
+
+                <input type="checkbox" name="veiculo1" value="1" id="veiculo1"> <label for="veiculo1">Eu tenho 1 carro</label>
+                <input type="checkbox" name="veiculo2" value="2" id="veiculo2"> <label for="veiculo2">Eu tenho 1 moto</label>
+
+                <label for="curso"> Curso </label>
+                <select name="curso">
+                    <option value="1"> Ciencia</option>
+                    <option value="2"> Eletrica</option>
+                    <option value="3"> Medicina</option>
+                </select>
+
+                Mensage: <textarea name="message" rows="10" cols="30"></textarea>
+
+                Data de Nascimento: <input type="date" name="data_nascimento" min="2025-01-02"> 
+
+                Auto complete: <input list="cheeses">
+                <datalist id="cheeses">
+                    <option value="Camembert"></option>
+                    <option value="Chedar"></option>
+                    <option value="Cotija"></option>
+                    <option value="Feta"></option>
+                </datalist>
+
+                <input type="hidden" name="contry" value="Brasil">
+
+                <input type="reset" value="Limpar">
+                <input type="submit" value="Enviar">
+
+                <button type=" button" onclick="alert('Hello mundo!')">Botão 01</button>
+
+                <button type=" button" onclick="soma(5,10);">Botão 02</button>
+                
+                <div id="area-msg">
+                    Elementos de bloco
+                </div>
+
+                Elements <span class="destaque"> de</span>
+                Linha <span class="destaque">Teste</span>
+
+
+            </form>
         </div>
 
     </div>
